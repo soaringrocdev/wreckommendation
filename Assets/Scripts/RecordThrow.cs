@@ -28,6 +28,30 @@ public class RecordThrow : MonoBehaviour
 
     public void ThrowDelay()
     {
+        RecordTaker[] takers = FindObjectsByType<RecordTaker>(FindObjectsSortMode.None);
+
+        if (takers != null)
+        {
+            RecordTaker closestTaker = null;
+            float closestDist = 100f;
+            
+            foreach(RecordTaker taker in takers)
+            {
+                float dist = Vector3.Distance(taker.gameObject.transform.position, transform.position);
+                if (dist < closestDist && dist > .2f)
+                {
+                    closestTaker = taker;
+                    closestDist = dist;
+                }
+            }
+
+            if (closestTaker != null)
+            {
+                transform.rotation = Quaternion.identity;
+                transform.position = closestTaker.gameObject.transform.position;
+            }
+        }
+
         Invoke("ThrowForce", .025f);
     }
 
