@@ -32,10 +32,10 @@ public class TargetWallScript : MonoBehaviour {
     void Start() {
         SceneManager = GetComponent<OVRSceneManager>();
 
-        SceneManager.SceneModelLoadedSuccessfully += TableTopFindandRelocate;
+        SceneManager.SceneModelLoadedSuccessfully += TargetWallSetup;
     }
 
-    void TableTopFindandRelocate() {
+    void TargetWallSetup() {
         OVRSceneAnchor[] sceneAnchors = FindObjectsOfType<OVRSceneAnchor>();
         //OVRSceneVolume Object ;
 
@@ -46,8 +46,8 @@ public class TargetWallScript : MonoBehaviour {
             OVRSemanticClassification label = sceneAnchors[i].GetComponent<OVRSemanticClassification>();
 
             if (label != null) {
-                if (label.Contains(OVRSceneManager.Classification.Desk)) {
-                    Debug.Log("this is a desk");
+                if (label.Contains(OVRSceneManager.Classification.WallFace)) {
+                    Debug.Log("this is a Wall");
                     GameObject spawn = Instantiate(ItemToPlaceOnDesk, sceneAnchors[i].transform, false);
                     //spawn.transform.position = new Vector3(spawn.transform.position.x + 5, spawn.transform.position.y, spawn.transform.position.z);
                         //transform.position = new Vector3(spawn.transform.position.x, spawn.transform.position.y v, spawn.transform.position.z);
