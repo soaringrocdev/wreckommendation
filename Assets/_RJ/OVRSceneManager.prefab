@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d1d1cfedbc1d9b4d8dd443c92d3dbfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemToPlaceOnDesk: {fileID: 100004, guid: bbb29c575e92ab64eb62ee335dc6f563, type: 3}
+  ItemToPlaceOnDesk: {fileID: 8299010207756273405, guid: 01b5d3debdde4d74588e286516b5fa5a, type: 3}
   surfaceXLocation: 2
   surfaceYLocation: 2
   scaleFactor: 0
