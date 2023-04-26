@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Wreck.unity
     guid: 34a266fef0eb04a4c99a5480c6c5d8d3
   - enabled: 1
