@@ -1,13 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RecordThrow : MonoBehaviour
 {
     public AudioClip discAudio;
+    public Image coverArt;
+
+    public AudioClip[] throwClips;
 
     public GameObject wallSavePrefab;
     public GameObject wallBreakPrefab;
+
+    public GameObject displayAlbum;
+    public GameObject grabAlbum;
 
     public LayerMask layerMask;
 
@@ -19,6 +26,7 @@ public class RecordThrow : MonoBehaviour
     private Rigidbody _rb;
     private Spinner _spinner;
     private RecordTaker _taker;
+    private AudioSource _throwAudio;
 
     public bool Thrown()
     {
@@ -27,6 +35,16 @@ public class RecordThrow : MonoBehaviour
 
     public void Take()
     {
+        if (grabAlbum)
+        {
+            grabAlbum.SetActive(false);
+        }
+
+        if (displayAlbum)
+        {
+            displayAlbum.SetActive(false);
+        }
+
         if (_taker)
         {
             _taker.PlaySong(null);
@@ -37,6 +55,13 @@ public class RecordThrow : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody>();
         _spinner = GetComponent<Spinner>();
+        _throwAudio = GetComponent<AudioSource>();
+
+        if (throwClips != null)
+        {
+            int index = Random.Range(0, throwClips.Length);
+            _throwAudio.clip = throwClips[index];
+        }
     }
 
     public void ThrowDelay()
@@ -106,6 +131,8 @@ public class RecordThrow : MonoBehaviour
                     _spinner.spin = true;
                     _spinner.rotateSpeed = 1f;
 
+                    _throwAudio.Play();
+
                     _thrown = true;
                 }
 
@@ -119,13 +146,24 @@ public class RecordThrow : MonoBehaviour
         {
             if (collision.gameObject.tag == "SaveWall")
             {
-                GameObject saveDisc = Instantiate(wallSavePrefab, transform.position, transform.rotation);
+                //GameObject saveDisc = Instantiate(wallSavePrefab, transform.position, Quaternion.identity);
 
                 Vector3 wallPos = collision.collider.ClosestPoint(transform.position);
 
-                saveDisc.transform.position = wallPos;
+                _spinner.spin = false;
 
-                gameObject.SetActive(false);
+                _rb.isKinematic = true;
+                transform.position = wallPos;
+
+                displayAlbum.SetActive(true);
+
+                transform.rotation = Quaternion.identity;
+
+                transform.right = collision.collider.gameObject.transform.forward;
+
+                //saveDisc.transform.position = wallPos;
+
+                //gameObject.SetActive(false);
             }
             else
             {
