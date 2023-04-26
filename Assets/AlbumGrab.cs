@@ -20,7 +20,11 @@ public class AlbumGrab : MonoBehaviour
 
     public void Grabbed()
     {
-        //GameObject Instantiate
+        GameObject record = Instantiate(recordPrefab, transform.position, transform.rotation);
+        RecordThrow recordThrower = record.GetComponent<RecordThrow>();
+        recordThrower.discAudio = song;
+
+        //TOOD assign cover art
 
         gameObject.SetActive(false);
     }
