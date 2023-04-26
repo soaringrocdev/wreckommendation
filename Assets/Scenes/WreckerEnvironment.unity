@@ -532,9 +532,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemToPlaceOnDesk: {fileID: 100004, guid: bbb29c575e92ab64eb62ee335dc6f563, type: 3}
-  surfaceXLocation: 2
-  surfaceYLocation: 2
-  scaleFactor: 0
+  surfaceXLocation: 0.1
+  surfaceYLocation: 0.2
+  surfaceZLocation: 0
 --- !u!114 &700777010
 MonoBehaviour:
   m_ObjectHideFlags: 0
