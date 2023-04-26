@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a14a778f47b31e9418687c7f31bf73b7
+guid: 3675ef39a07384a44804e82583d92b25
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,68 +7,43 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Back
-    second: {fileID: 2100000, guid: f3830e68a62b577469ffbc5978ae9ec4, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: FrontBottom
-    second: {fileID: 2100000, guid: ae0c5caf5a93efb47b89afeed9c9281f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
       name: Mat
-    second: {fileID: 2100000, guid: dec401f21c0088843b58889a3bd05683, type: 2}
+    second: {fileID: 2100000, guid: 41bb44fb2957a7b42915b3cc6a80e492, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Mat.1
-    second: {fileID: 2100000, guid: c981df6e168171d4e8747c277824e9f2, type: 2}
+    second: {fileID: 2100000, guid: a5ffeca068e57ba4ba9ff55ceed6facc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Mat.1.1
-    second: {fileID: 2100000, guid: 52f3bd629e9604f409e5cc5908270ac0, type: 2}
+      name: Mat.2
+    second: {fileID: 2100000, guid: 0054c4396b828714085a5bad68ec16b5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Side
-    second: {fileID: 2100000, guid: 433cb372cb9a6af469e54a7db2c5cb8e, type: 2}
+      name: Mat.3
+    second: {fileID: 2100000, guid: 09c3fc5ac66c0c849b8de697ad908764, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Side.1
-    second: {fileID: 2100000, guid: b42b1ec14291a2a45805ca5629edc73b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Side.2
-    second: {fileID: 2100000, guid: 609360a3b4b749341b25304e512300c7, type: 2}
+      name: Mat.4
+    second: {fileID: 2100000, guid: c9bdb84038ca5764ea1773df54533b95, type: 2}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: CABINET_BACK_01
-    second: {fileID: 2800000, guid: 7546ffd7dfd14d5419fdb70972d6efec, type: 3}
+      name: PLAYER_CASE_BACK_01_2
+    second: {fileID: 2800000, guid: f1beaf269d7369d45b76ec9612a6c305, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: CABINET_FRONT_BOTTOM_01
-    second: {fileID: 2800000, guid: 144a6ac34b69dfa4684dd62e420f05c8, type: 3}
+      name: PLAYER_CASE_PLAYER_01
+    second: {fileID: 2800000, guid: d1d77678119cf8547844666a304134cc, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: CABINET_FRONT_TOP_01
-    second: {fileID: 2800000, guid: 1db2442865fa48643ad343abb78af388, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: CABINET_JPG_01
-    second: {fileID: 2800000, guid: ae1fb5a9cec92104490071c596f29dcd, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: CABINET_SIDE_01
-    second: {fileID: 2800000, guid: a42c35f83996e774ba01c854df60bb19, type: 3}
+      name: PLAYER_CASE_TOP_BOTTOM_01
+    second: {fileID: 2800000, guid: 482559ad6e535a64a9803366c4805dc9, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
