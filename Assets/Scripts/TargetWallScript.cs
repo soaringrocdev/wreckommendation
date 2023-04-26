@@ -4,28 +4,23 @@ using UnityEngine;
 
 public class TargetWallScript : MonoBehaviour {
 
-    public GameObject ItemToPlaceOnDesk;
+    public GameObject ItemToPlaceOnWall;
 
     //Locations to Instantiate
 
-    public enum Locations {
-        POSITIVEBOUND,
-        POSITIVEMIDDLE,
-        MIDDLE,
-        NEGATIVEMIDDLE,
-        NEGATIVEBOUND
-    }
 
     [SerializeField]
-    private Locations surfaceXLocation;
+    private float surfaceXLocation;
 
     [SerializeField]
-    private Locations surfaceYLocation;
+    private float surfaceYLocation;
 
     [SerializeField]
-    private float scaleFactor;
+    private float surfaceZLocation;
 
-    [Tooltip("Add a cube on a desk")]
+
+
+    [Tooltip("Add a cube on a wall")]
 
     protected OVRSceneManager SceneManager { get; private set; }
     // Start is called before the first frame update
@@ -48,9 +43,9 @@ public class TargetWallScript : MonoBehaviour {
             if (label != null) {
                 if (label.Contains(OVRSceneManager.Classification.WallFace)) {
                     Debug.Log("this is a Wall");
-                    GameObject spawn = Instantiate(ItemToPlaceOnDesk, sceneAnchors[i].transform, false);
-                    //spawn.transform.position = new Vector3(spawn.transform.position.x + 5, spawn.transform.position.y, spawn.transform.position.z);
-                        //transform.position = new Vector3(spawn.transform.position.x, spawn.transform.position.y v, spawn.transform.position.z);
+                    GameObject spawn = Instantiate(ItemToPlaceOnWall, sceneAnchors[i].transform, false);
+                    spawn.transform.position = new Vector3(spawn.transform.position.x + surfaceXLocation, spawn.transform.position.y + surfaceYLocation, spawn.transform.position.z + surfaceZLocation);
+                    //transform.position = new Vector3(spawn.transform.position.x, spawn.transform.position.y v, spawn.transform.position.z);
                 }
             }
         }
