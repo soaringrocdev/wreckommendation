@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - SaveWall
+  - SamplesInfoPanel
   layers:
   - Default
   - TransparentFX
