@@ -645,6 +645,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4978886601145178085, guid: d78480256dcdaba43950b97242f277f7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5765125703679783474, guid: d78480256dcdaba43950b97242f277f7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6801141470226451552, guid: d78480256dcdaba43950b97242f277f7, type: 3}
       propertyPath: m_Name
       value: StartupUI
