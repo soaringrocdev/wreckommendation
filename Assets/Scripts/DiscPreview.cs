@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DiscPreview : MonoBehaviour
@@ -57,31 +58,40 @@ public class DiscPreview : MonoBehaviour
 
     public void Smashed()
     {
+        if (!_started)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
         CheckDiscs();
     }
     
     public void CheckDiscs()
     {
-        RecordThrow[] records = FindObjectsOfType<RecordThrow>();
-        int numAvailable = 0;
-
-        if (records != null)
+        if (_started)
         {
-            foreach (RecordThrow record in records)
+            RecordThrow[] records = FindObjectsOfType<RecordThrow>(false);
+            int numAvailable = 0;
+
+            if (records != null)
             {
-                if (!record.stuck)
+                foreach (RecordThrow record in records)
                 {
-                    numAvailable++;
+                    if (!record.stuck)
+                    {
+                        numAvailable++;
+                    }
                 }
             }
-        }
 
-        if (numAvailable == 0)
-        {
-            SpawnDiscs();
+            if (numAvailable == 0)
+            {
+                //SpawnDiscs();
+            }
         }
     }
 
+    [ContextMenu("Spawn")]
     public void SpawnDiscs()
     {
         GameObject discs = Instantiate(introStuff, introStuff.transform.position, introStuff.transform.rotation);

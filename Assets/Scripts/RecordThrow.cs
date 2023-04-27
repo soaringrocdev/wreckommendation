@@ -196,6 +196,8 @@ public class RecordThrow : MonoBehaviour
                     thunkSource.Play();
                 }
 
+                stuck = true;
+
                 WallHandler wall = collision.collider.gameObject.GetComponent<WallHandler>();
                 wall.goodWall = true;
 
@@ -203,14 +205,14 @@ public class RecordThrow : MonoBehaviour
 
                 _thrown = false;
 
-                stuck = true;
-
                 //saveDisc.transform.position = wallPos;
 
                 //gameObject.SetActive(false);
             }
             else
             {
+                stuck = false;
+
                 GameObject breakDisc = Instantiate(wallBreakPrefab, transform.position, transform.rotation);
 
                 Rigidbody[] rbs = breakDisc.GetComponentsInChildren<Rigidbody>();
