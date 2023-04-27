@@ -3,7 +3,177 @@ guid: e02eb85994770ab4682814e1a8e36a29
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube.1
+    second: {fileID: 2100000, guid: 25d4bc7eed6d8714dbf320f9fe5170b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube.2
+    second: {fileID: 2100000, guid: c6429ff4722be174f91fd05ca4f967df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LElbow
+    second: {fileID: 2100000, guid: 3a2355cc71f5f9a4983be6cc28aba160, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LShoulder
+    second: {fileID: 2100000, guid: cbd24054b7789214c8d5d80bafd396de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lhand
+    second: {fileID: 2100000, guid: efe7a68d9723e0543892b06c27bf00bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat
+    second: {fileID: 2100000, guid: 15da1508db3e04c419619ad28b165e13, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1
+    second: {fileID: 2100000, guid: 7ddb1f65c3044724f9dcead1133788ed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.2
+    second: {fileID: 2100000, guid: 2f1fbebc7284a994da972fef5ecba84c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.4
+    second: {fileID: 2100000, guid: 7da735e672402e1449cdb82832e0c7dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RElbow
+    second: {fileID: 2100000, guid: e0053f0042b6eb146a82b8b7c7e5c2c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RHand
+    second: {fileID: 2100000, guid: c1c8281955eebac40a929f4e225aa88b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RShoulder
+    second: {fileID: 2100000, guid: 5cbca090207ae6c4db4e27b5b72e0a00, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Receiver
+    second: {fileID: 2100000, guid: 4589987379e699e44a49f66204c497c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScreenTexture
+    second: {fileID: 2100000, guid: b6ceb53fd823a544b88a858027226da9, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: BIG_SPEAKER_01
+    second: {fileID: 2800000, guid: 8997363da8b6f504c9cf4ee7698aced5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ColorBars
+    second: {fileID: 2800000, guid: 57af1dccc245d0b4cae1eb36324180f4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cube.1Surface_Color
+    second: {fileID: 2800000, guid: 457e8a12560c2ea448911d3d0bd978be, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CubeSurface_Color
+    second: {fileID: 2800000, guid: d7d3ea7b5f79ce54fac02d0cf49e399d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: DISCMAN_01
+    second: {fileID: 2800000, guid: baaa7f5919623304090e1a3f588b17c9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: LElbowSurface_Color
+    second: {fileID: 2800000, guid: c8cdf7504313a04459b7c6975ee0dce2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: LShoulderSurface_Color
+    second: {fileID: 2800000, guid: d293b3e684c4b804997ef1ee1ef2221d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: LhandSurface_Color
+    second: {fileID: 2800000, guid: bf4711c63a390c14abf5426e0f9f4aba, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: RECEIVER_01
+    second: {fileID: 2800000, guid: be73c209d5776124eaad6784daf66390, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: RElbowSurface_Color
+    second: {fileID: 2800000, guid: 9e44961979a346a4ba6b4b0b9401cee8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: RHandSurface_Color
+    second: {fileID: 2800000, guid: f454ccb2ff0c56843bc07fbd6a717b9d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: RShoulderSurface_Color
+    second: {fileID: 2800000, guid: 9ee26241680f9584cbb9f8565e72673a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ReceiverSurface_Color
+    second: {fileID: 2800000, guid: 9e9ed4bfbbc4a5d4fa733d03a737315a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SMALL_SPEAKER_01
+    second: {fileID: 2800000, guid: 86d6e6bd970154a47ac59ebc1afd82bd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SMALL_SPEAKER_02
+    second: {fileID: 2800000, guid: 2c730bd0a32f924488ea8f4bdbdfdae0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: TV_02_BACK
+    second: {fileID: 2800000, guid: 0e2cad57634b573409c096d9dffe95c2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: TV_02_FRONT
+    second: {fileID: 2800000, guid: 0f886c81635287c44bcaa10b41efba84, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: TV_02_SIDE
+    second: {fileID: 2800000, guid: 315201dd5b783294db58f4df314f90e1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: TV_02_TOP
+    second: {fileID: 2800000, guid: 9d53ca7bc7390bd43874b145ddb943d6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: WALKMAN_01
+    second: {fileID: 2800000, guid: d0700542ebcd89b43aa722c6035e19d6, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

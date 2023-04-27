@@ -94,6 +94,18 @@ public class RecordThrow : MonoBehaviour
         {
             transform.position = _taker.transform.position;
         }
+
+        if (_thrown)
+        {
+            if (transform.position.y < -100f)
+            {
+                stuck = false;
+
+                DiscPreview.Instance.Smashed();
+
+                gameObject.SetActive(false);
+            }
+        }
     }
 
     [ContextMenu("Editor Throw")]

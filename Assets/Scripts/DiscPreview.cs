@@ -10,9 +10,15 @@ public class DiscPreview : MonoBehaviour
 
     public GameObject introStuff;
 
+    public GameObject bossStuff;
+
     public Image discPreview;
 
     private bool _started;
+    private bool _bossStart;
+
+    private int recordNumber;
+    private int recordsSmashed;
 
     private void Start()
     {
@@ -24,6 +30,8 @@ public class DiscPreview : MonoBehaviour
 
         //Set the new instance to this object.
         Instance = this;
+
+        recordNumber = 0;
     }
 
     public void Preview(Sprite sprite)
@@ -53,6 +61,8 @@ public class DiscPreview : MonoBehaviour
             SpawnDiscs();
         }
 
+        recordNumber += 1;
+
         CheckDiscs();
     }
 
@@ -63,6 +73,10 @@ public class DiscPreview : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
+        recordNumber += 1;
+
+        recordsSmashed += 1;
+
         CheckDiscs();
     }
     
@@ -70,23 +84,43 @@ public class DiscPreview : MonoBehaviour
     {
         if (_started)
         {
-            RecordThrow[] records = FindObjectsOfType<RecordThrow>(false);
-            int numAvailable = 0;
-
-            if (records != null)
+            if (recordNumber > 8)
             {
-                foreach (RecordThrow record in records)
-                {
-                    if (!record.stuck)
-                    {
-                        numAvailable++;
-                    }
-                }
+                SpawnDiscs();
+
+                recordNumber = 0;
             }
 
-            if (numAvailable == 0)
+            if (recordsSmashed > 5 && !_bossStart)
             {
-                //SpawnDiscs();
+                _bossStart = true;
+
+                BossStart();
+            }
+        }
+    }
+
+    public void BossStart()
+    {
+        if (bossStuff)
+        {
+            WallHandler[] walls = FindObjectsOfType<WallHandler>();
+            bool bossSpawned = false;
+
+            if (walls != null)
+            {
+                foreach (WallHandler waller in walls)
+                {
+                    if (!waller.goodWall)
+                    {
+                        bossStuff.transform.position = waller.gameObject.transform.position;
+                        bossStuff.transform.forward = -waller.gameObject.transform.forward;
+
+                        bossStuff.transform.position = new Vector3(bossStuff.transform.position.x, 0, bossStuff.transform.position.z);
+
+                        waller.gameObject.SetActive(false);
+                    }
+                }
             }
         }
     }
