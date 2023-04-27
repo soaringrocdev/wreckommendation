@@ -10,9 +10,12 @@ public class DiscPreview : MonoBehaviour
 
     public GameObject introStuff;
 
+    public GameObject bossStuff;
+
     public Image discPreview;
 
     private bool _started;
+    private bool _bossStart;
 
     private int recordNumber;
     private int recordsSmashed;
@@ -81,16 +84,43 @@ public class DiscPreview : MonoBehaviour
     {
         if (_started)
         {
-            if (recordNumber > 7)
+            if (recordNumber > 8)
             {
                 SpawnDiscs();
 
                 recordNumber = 0;
             }
 
-            if (recordsSmashed > 5)
+            if (recordsSmashed > 5 && !_bossStart)
             {
+                _bossStart = true;
 
+                BossStart();
+            }
+        }
+    }
+
+    public void BossStart()
+    {
+        if (bossStuff)
+        {
+            WallHandler[] walls = FindObjectsOfType<WallHandler>();
+            bool bossSpawned = false;
+
+            if (walls != null)
+            {
+                foreach (WallHandler waller in walls)
+                {
+                    if (!waller.goodWall)
+                    {
+                        bossStuff.transform.position = waller.gameObject.transform.position;
+                        bossStuff.transform.forward = -waller.gameObject.transform.forward;
+
+                        bossStuff.transform.position = new Vector3(bossStuff.transform.position.x, 0, bossStuff.transform.position.z);
+
+                        waller.gameObject.SetActive(false);
+                    }
+                }
             }
         }
     }
