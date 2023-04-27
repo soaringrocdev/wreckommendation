@@ -42,7 +42,7 @@ public class DiscPreview : MonoBehaviour
 
     public void SpawnDiscs()
     {
-        GameObject discs = Instantiate(introStuff);
+        GameObject discs = Instantiate(introStuff, introStuff.transform.position, introStuff.transform.rotation);
         discs.SetActive(true);
     }
 }
