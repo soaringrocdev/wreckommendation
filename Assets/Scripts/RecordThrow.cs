@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class RecordThrow : MonoBehaviour
 {
     public AudioClip discAudio;
-    public Image coverArt;
+    public Sprite coverArt;
+    public Image grabArt, displayArt;
 
     public AudioClip[] throwClips;
 
@@ -35,6 +36,8 @@ public class RecordThrow : MonoBehaviour
 
     public void Take()
     {
+        _rb.isKinematic = false;
+
         if (grabAlbum)
         {
             grabAlbum.SetActive(false);
@@ -62,6 +65,9 @@ public class RecordThrow : MonoBehaviour
             int index = Random.Range(0, throwClips.Length);
             _throwAudio.clip = throwClips[index];
         }
+
+        grabArt.sprite = coverArt;
+        displayArt.sprite = coverArt;
     }
 
     public void ThrowDelay()

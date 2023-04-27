@@ -18,7 +18,7 @@ public class Spinner : MonoBehaviour
     {
         if (spin)
         {
-            transform.RotateAroundLocal(new Vector3(0, 1, 0), rotateSpeed);
+            transform.RotateAround(transform.position, transform.up, rotateSpeed);
         }
     }
 }
