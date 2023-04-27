@@ -26,6 +26,9 @@ public class SimpleResizer
         prefab.transform.localPosition = Vector3.zero;
         prefab.transform.localRotation = Quaternion.identity;
 
+        //RJ - Adding collider here
+        prefab.gameObject.AddComponent<BoxCollider>();
+
         // cleanup
         MonoBehaviour.Destroy(resizable);
     }

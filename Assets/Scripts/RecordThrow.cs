@@ -51,6 +51,8 @@ public class RecordThrow : MonoBehaviour
         if (_taker)
         {
             _taker.PlaySong(null);
+
+            _taker = null;
         }
     }
 

@@ -43,6 +43,10 @@ public class SurfaceAnchorScript : MonoBehaviour {
                     //OVRSceneVolume DeskVolume = sceneAnchors[i].GetComponent<OVRSceneVolume>();
                     //Debug.Log("pump up the volume after" + DeskVolume.Width);
                     GameObject spawn = Instantiate(ItemToPlaceOnDesk, sceneAnchors[i].transform, false);
+
+                    //Rotate Upright in world space
+                    spawn.transform.rotation = Quaternion.identity;
+
                     spawn.transform.position = new Vector3(spawn.transform.position.x + surfaceXLocation, spawn.transform.position.y + surfaceYLocation, spawn.transform.position.z + surfaceZLocation);
                         //transform.position = new Vector3(spawn.transform.position.x, spawn.transform.position.y v, spawn.transform.position.z);
                 }
