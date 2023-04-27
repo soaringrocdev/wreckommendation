@@ -25,6 +25,8 @@ public class RecordThrow : MonoBehaviour
 
     public float throwForceAdjust;
 
+    public bool stuck;
+
     private bool _thrown;
     private Rigidbody _rb;
     private Spinner _spinner;
@@ -44,6 +46,8 @@ public class RecordThrow : MonoBehaviour
     public void Take()
     {
         _rb.isKinematic = false;
+
+        stuck = false;
 
         if (grabAlbum)
         {
@@ -192,7 +196,14 @@ public class RecordThrow : MonoBehaviour
                     thunkSource.Play();
                 }
 
+                WallHandler wall = collision.collider.gameObject.GetComponent<WallHandler>();
+                wall.goodWall = true;
+
+                DiscPreview.Instance.Saved(wall);
+
                 _thrown = false;
+
+                stuck = true;
 
                 //saveDisc.transform.position = wallPos;
 
