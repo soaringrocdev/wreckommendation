@@ -91,7 +91,7 @@ public class DiscPreview : MonoBehaviour
                 recordNumber = 0;
             }
 
-            if (recordsSmashed > 5 && !_bossStart)
+            if (recordsSmashed > 4 && !_bossStart)
             {
                 _bossStart = true;
 
@@ -111,14 +111,20 @@ public class DiscPreview : MonoBehaviour
             {
                 foreach (WallHandler waller in walls)
                 {
-                    if (!waller.goodWall)
+                    if (!waller.goodWall && !bossSpawned)
                     {
                         bossStuff.transform.position = waller.gameObject.transform.position;
-                        bossStuff.transform.forward = -waller.gameObject.transform.forward;
+                        bossStuff.transform.right = -waller.gameObject.transform.right;
 
                         bossStuff.transform.position = new Vector3(bossStuff.transform.position.x, 0, bossStuff.transform.position.z);
 
                         waller.gameObject.SetActive(false);
+
+                        bossStuff.SetActive(true);
+
+                        bossStuff.transform.LookAt(Camera.main.transform);
+
+                        bossSpawned = true;
                     }
                 }
             }

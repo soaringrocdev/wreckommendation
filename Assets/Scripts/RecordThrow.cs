@@ -227,6 +227,12 @@ public class RecordThrow : MonoBehaviour
 
                 GameObject breakDisc = Instantiate(wallBreakPrefab, transform.position, transform.rotation);
 
+                BossHandler boss = collision.gameObject.GetComponent<BossHandler>();
+                if (boss)
+                {
+                    boss.Dead();
+                }
+
                 Rigidbody[] rbs = breakDisc.GetComponentsInChildren<Rigidbody>();
 
                 foreach(Rigidbody rb in rbs)
