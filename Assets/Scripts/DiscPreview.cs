@@ -14,6 +14,9 @@ public class DiscPreview : MonoBehaviour
 
     private bool _started;
 
+    private int recordNumber;
+    private int recordsSmashed;
+
     private void Start()
     {
         if (Instance != null)
@@ -24,6 +27,8 @@ public class DiscPreview : MonoBehaviour
 
         //Set the new instance to this object.
         Instance = this;
+
+        recordNumber = 0;
     }
 
     public void Preview(Sprite sprite)
@@ -53,6 +58,8 @@ public class DiscPreview : MonoBehaviour
             SpawnDiscs();
         }
 
+        recordNumber += 1;
+
         CheckDiscs();
     }
 
@@ -63,6 +70,10 @@ public class DiscPreview : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
+        recordNumber += 1;
+
+        recordsSmashed += 1;
+
         CheckDiscs();
     }
     
@@ -70,23 +81,16 @@ public class DiscPreview : MonoBehaviour
     {
         if (_started)
         {
-            RecordThrow[] records = FindObjectsOfType<RecordThrow>(false);
-            int numAvailable = 0;
-
-            if (records != null)
+            if (recordNumber > 7)
             {
-                foreach (RecordThrow record in records)
-                {
-                    if (!record.stuck)
-                    {
-                        numAvailable++;
-                    }
-                }
+                SpawnDiscs();
+
+                recordNumber = 0;
             }
 
-            if (numAvailable == 0)
+            if (recordsSmashed > 5)
             {
-                //SpawnDiscs();
+
             }
         }
     }
