@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Wreck.unity
     guid: 34a266fef0eb04a4c99a5480c6c5d8d3
   - enabled: 0
-    path: Assets/Scenes/WreckEnv.unity
-    guid: e418882dbb65ea042aa47ee40d63b62a
-  - enabled: 0
     path: Assets/Scenes/WreckerEnvironment.unity
     guid: 5ac23f817db40a646bc929ad2d067f38
   - enabled: 1
