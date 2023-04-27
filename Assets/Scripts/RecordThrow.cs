@@ -75,6 +75,14 @@ public class RecordThrow : MonoBehaviour
         Invoke("ThrowForce", .025f);
     }
 
+    private void FixedUpdate()
+    {
+        if (_taker)
+        {
+            transform.position = _taker.transform.position;
+        }
+    }
+
     [ContextMenu("Editor Throw")]
     public void ThrowForce()
     {
@@ -99,7 +107,7 @@ public class RecordThrow : MonoBehaviour
             if (closestTaker != null)
             {
                 _spinner.spin = true;
-                _spinner.rotateSpeed = .05f;
+                _spinner.rotateSpeed = .25f;
 
                 transform.rotation = Quaternion.identity;
                 transform.position = closestTaker.gameObject.transform.position;
@@ -166,6 +174,8 @@ public class RecordThrow : MonoBehaviour
                 transform.rotation = Quaternion.identity;
 
                 transform.right = collision.collider.gameObject.transform.forward;
+
+                _thrown = false;
 
                 //saveDisc.transform.position = wallPos;
 
