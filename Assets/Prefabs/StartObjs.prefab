@@ -717,7 +717,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5121132858657732916, guid: 01b5d3debdde4d74588e286516b5fa5a, type: 3}
       propertyPath: _constraints.MaxAngle.Value
-      value: 10
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5121132858657732916, guid: 01b5d3debdde4d74588e286516b5fa5a, type: 3}
+      propertyPath: _constraints.MinAngle.Value
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 8299010207756273405, guid: 01b5d3debdde4d74588e286516b5fa5a, type: 3}
       propertyPath: m_Name
