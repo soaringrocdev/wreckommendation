@@ -34,6 +34,11 @@ public class RecordThrow : MonoBehaviour
         return _thrown;
     }
 
+    public void Preview()
+    {
+        DiscPreview.Instance.Preview(coverArt);
+    }
+
     public void Take()
     {
         _rb.isKinematic = false;
