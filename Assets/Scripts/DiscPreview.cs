@@ -122,7 +122,12 @@ public class DiscPreview : MonoBehaviour
 
                         bossStuff.SetActive(true);
 
-                        bossStuff.transform.LookAt(Camera.main.transform);
+                        //bossStuff.transform.LookAt(Camera.main.transform);
+
+                        var lookPos = Camera.main.transform.position - bossStuff.transform.position;
+                        lookPos.y = 0;
+                        var rotation = Quaternion.LookRotation(lookPos);
+                        bossStuff.transform.rotation = rotation;
 
                         bossSpawned = true;
                     }
