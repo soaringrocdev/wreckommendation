@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StartingSetup : MonoBehaviour
 {
-    public Transform lid, needle;
+    public Transform rotRef, needle;
 
     public RecordThrow record;
     private void Start()
@@ -14,6 +14,8 @@ public class StartingSetup : MonoBehaviour
 
     void Setup()
     {
+        needle.rotation = rotRef.rotation;
+
         record.ThrowForce();
     }
 }

@@ -7,7 +7,11 @@ public class DiscPreview : MonoBehaviour
 {
     public static DiscPreview Instance;
 
+    public GameObject introStuff;
+
     public Image discPreview;
+
+    private bool _started;
 
     private void Start()
     {
@@ -24,5 +28,21 @@ public class DiscPreview : MonoBehaviour
     public void Preview(Sprite sprite)
     {
         discPreview.sprite = sprite;
+    }
+
+    public void Smashed()
+    {
+        if (!_started)
+        {
+            _started = true;
+
+            SpawnDiscs();
+        }
+    }
+
+    public void SpawnDiscs()
+    {
+        GameObject discs = Instantiate(introStuff);
+        discs.SetActive(true);
     }
 }

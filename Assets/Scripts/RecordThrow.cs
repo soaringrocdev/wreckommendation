@@ -6,10 +6,12 @@ using UnityEngine.UI;
 public class RecordThrow : MonoBehaviour
 {
     public AudioClip discAudio;
+    public AudioSource thunkSource;
     public Sprite coverArt;
     public Image grabArt, displayArt;
 
     public AudioClip[] throwClips;
+    public AudioClip[] thunkClips;
 
     public GameObject wallSavePrefab;
     public GameObject wallBreakPrefab;
@@ -180,7 +182,15 @@ public class RecordThrow : MonoBehaviour
 
                 transform.rotation = Quaternion.identity;
 
-                transform.right = collision.collider.gameObject.transform.forward;
+                transform.right = -collision.collider.gameObject.transform.forward;
+
+                if (thunkClips != null)
+                {
+                    int index = Random.Range(0, thunkClips.Length);
+                    thunkSource.clip = thunkClips[index];
+
+                    thunkSource.Play();
+                }
 
                 _thrown = false;
 
@@ -198,6 +208,8 @@ public class RecordThrow : MonoBehaviour
                 {
                     rb.AddExplosionForce(.75f, transform.position, 1f, .075f, ForceMode.Impulse);
                 }
+
+                DiscPreview.Instance.Smashed();
 
                 gameObject.SetActive(false);
             }
