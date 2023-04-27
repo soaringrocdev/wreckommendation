@@ -269,7 +269,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7aa54f6abd0aec844872bd547ed87387, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 26da1b5958adff94486275f32073d534, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -422,7 +422,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7cdd52500dc5c534a9a57e822cddf2c5, type: 2}
+  - {fileID: 2100000, guid: 970da48b9c60d224da1c6275f8e285da, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -717,7 +717,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5121132858657732916, guid: 01b5d3debdde4d74588e286516b5fa5a, type: 3}
       propertyPath: _constraints.MaxAngle.Value
-      value: 10
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5121132858657732916, guid: 01b5d3debdde4d74588e286516b5fa5a, type: 3}
+      propertyPath: _constraints.MinAngle.Value
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 8299010207756273405, guid: 01b5d3debdde4d74588e286516b5fa5a, type: 3}
       propertyPath: m_Name
@@ -1023,6 +1027,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a14a778f47b31e9418687c7f31bf73b7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 54d04177fe30f7349a2a6c966f6dfc45, type: 2}
     - target: {fileID: 919132149155446097, guid: a14a778f47b31e9418687c7f31bf73b7, type: 3}
       propertyPath: m_Name
       value: RecordBin

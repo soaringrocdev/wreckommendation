@@ -48,27 +48,32 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: CABINET_BACK_01
-    second: {fileID: 2800000, guid: 7546ffd7dfd14d5419fdb70972d6efec, type: 3}
+    second: {fileID: 2800000, guid: 61bd59c29dd18cc43bdab3a7dd042b0b, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: CABINET_FRONT_BOTTOM_01
-    second: {fileID: 2800000, guid: 144a6ac34b69dfa4684dd62e420f05c8, type: 3}
+    second: {fileID: 2800000, guid: f6929fc07bd02614eb482fa1e1b0f886, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: CABINET_FRONT_TOP_01
-    second: {fileID: 2800000, guid: 1db2442865fa48643ad343abb78af388, type: 3}
+    second: {fileID: 2800000, guid: 348f1a252c8d3be429fc65bb6f40b69d, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: CABINET_JPG_01
-    second: {fileID: 2800000, guid: ae1fb5a9cec92104490071c596f29dcd, type: 3}
+    second: {fileID: 2800000, guid: b036621c41cdb8b4cba37ec8e390ceff, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: CABINET_SIDE_01
-    second: {fileID: 2800000, guid: a42c35f83996e774ba01c854df60bb19, type: 3}
+    second: {fileID: 2800000, guid: 161ccfce1b5bc7b4ca96921b096eb2e5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CubeSurface_Color
+    second: {fileID: 2800000, guid: 9d52060f20ba9d1438559129092b66ec, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
