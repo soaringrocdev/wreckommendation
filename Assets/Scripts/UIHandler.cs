@@ -7,8 +7,8 @@ public class UIHandler : MonoBehaviour
 {
 
 public class ClickAction : MonoBehaviour, IPointerClickHandler {
-    public void OnPointerClick(PointerEventData eventData) {
-            Destroy(this);
+        public void OnPointerClick(PointerEventData eventData) {
+                this.gameObject.SetActive(false);
+        }
     }
-}
 }
