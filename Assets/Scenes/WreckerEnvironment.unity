@@ -567,7 +567,7 @@ MonoBehaviour:
   ItemToPlaceOnWall: {fileID: 4988852463660943720, guid: ac5cc7311cc950e4bb8f98c4ce8b16a5, type: 3}
   surfaceXLocation: 0
   surfaceYLocation: 0
-  surfaceZLocation: 0
+  surfaceZLocation: 0.1
 --- !u!1 &859651090
 GameObject:
   m_ObjectHideFlags: 0

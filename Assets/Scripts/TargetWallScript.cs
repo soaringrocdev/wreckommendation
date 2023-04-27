@@ -45,7 +45,7 @@ public class TargetWallScript : MonoBehaviour {
                     GameObject spawn = Instantiate(ItemToPlaceOnWall, sceneAnchors[i].transform, false);
                     spawn.transform.position = new Vector3(spawn.transform.position.x + surfaceXLocation, spawn.transform.position.y + surfaceYLocation, spawn.transform.position.z + surfaceZLocation);
                     //transform.position = new Vector3(spawn.transform.position.x, spawn.transform.position.y v, spawn.transform.position.z);
-                    Debug.Log(sceneAnchors[i].transform.localScale);
+                    //Debug.Log(sceneAnchors[i].transform.localScale);
 
                 }
             }
