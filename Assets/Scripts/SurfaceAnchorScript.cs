@@ -8,7 +8,6 @@ public class SurfaceAnchorScript : MonoBehaviour {
 
     //Locations to Instantiate
 
-
     [SerializeField]
     private float surfaceXLocation;
 
@@ -31,7 +30,6 @@ public class SurfaceAnchorScript : MonoBehaviour {
 
     void TableTopFindandRelocate() {
         OVRSceneAnchor[] sceneAnchors = FindObjectsOfType<OVRSceneAnchor>();
-        OVRSceneVolume Object ;
 
         //initialize game code
 
@@ -41,7 +39,9 @@ public class SurfaceAnchorScript : MonoBehaviour {
 
             if (label != null) {
                 if (label.Contains(OVRSceneManager.Classification.Desk)) {
-                    Debug.Log("this is a desk");
+                    //Debug.Log("this is a desk");
+                    //OVRSceneVolume DeskVolume = sceneAnchors[i].GetComponent<OVRSceneVolume>();
+                    //Debug.Log("pump up the volume after" + DeskVolume.Width);
                     GameObject spawn = Instantiate(ItemToPlaceOnDesk, sceneAnchors[i].transform, false);
                     spawn.transform.position = new Vector3(spawn.transform.position.x + surfaceXLocation, spawn.transform.position.y + surfaceYLocation, spawn.transform.position.z + surfaceZLocation);
                         //transform.position = new Vector3(spawn.transform.position.x, spawn.transform.position.y v, spawn.transform.position.z);
